@@ -11,4 +11,8 @@ class CompaniesController < ApplicationController
     #@contact = Contact.find(params["id"])
   end
 
+  def new
+    @company = Company.new
+  end
+
 end

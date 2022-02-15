@@ -2,7 +2,7 @@
 
 <p>Location: <%= "#{@company.city}, #{@company.state}" %></p>
 <ul>
-    <% for contact in Contact.all %>
+    <% for contact in Contact.where(company_id: params["id"]) %>
         <li>
             <%= "#{contact.first_name} #{contact.last_name}"%>
         </li>
