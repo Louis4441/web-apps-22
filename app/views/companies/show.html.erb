@@ -1,0 +1,12 @@
+<h1><%= @company.name %></h1>
+
+<p>Location: <%= "#{@company.city}, #{@company.state}" %></p>
+<ul>
+    <% for contact in Contact.all %>
+        <li>
+            <%= "#{contact.first_name} #{contact.last_name}"%>
+        </li>
+    <% end %>
+</ul>
+
+<a href="/companies">Back to index</a>
